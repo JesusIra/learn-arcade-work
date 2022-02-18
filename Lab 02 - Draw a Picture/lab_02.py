@@ -1,6 +1,6 @@
 # Importamos arcade
 import arcade
-
+from random import randint
 # open window
 arcade.open_window (800,600, "Drawing example")
 # CIELO
@@ -20,26 +20,10 @@ arcade.draw_triangle_filled(800, 100, 500, 100, 650, 400, arcade.color.LIGHT_YEL
 # SOMBRA PIRAMIDE DERECHA
 arcade.draw_triangle_filled(785, 100, 515, 100, 650,385, arcade.color.YELLOW_ORANGE)
 # ESTRELLAS
-arcade.draw_rectangle_filled(0, 500, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(10, 500, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(60, 500, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(130, 500, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(210, 500, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(300, 559, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(15, 400, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(300, 450, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(500, 450, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(610, 555, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(15, 570, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(15, 590, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(30, 580, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(60, 585, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(90, 570, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(115, 590, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(150, 590, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(200, 590, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(455, 555, 5, 5, arcade.color.GOLD)
-arcade.draw_rectangle_filled(800, 489, 5, 5, arcade.color.GOLD)
+for _ in range(75):
+    randx= randint(15, 675)
+    randy=randint(400,575)
+    arcade.draw_rectangle_filled(randx, randy, 5, 5, arcade.color.GOLD)
 
 arcade.finish_render()
 arcade.run()
